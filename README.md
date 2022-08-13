@@ -1,12 +1,45 @@
-# *HW3
+# LetNet (numpy)
 
-# 1.  train model
-LetNet_old.ipynb 和 LetNet.ipynb分別為改進前後的LetNet執行程序 train model 指令皆寫在裡面，模型定義寫在 LeNet_module.py
+# 1.  training dataset
 
-進入 hw3.ipynb 一開會 import 會用到的 pachage 包括 LeNet_module.py 以及 function.py，務必將這四個檔案放在同目錄底下
-再來會讀圖片的路徑，務必按照寫在變數 train_df, test_df, val_df 務必把照片的路徑按照後面的方法參數中放。
+此任務為圖片分類任務，資料皆為狗的照片，並可以分為50種不同的狗，下方照片為舉例圖片
 
-接著就是提取特徵以及定義模型參數，最後是訓練模型。
+![n02111277_160](https://github.com/ss9636970/KAZE-perception_learning/blob/main/readme/n02111277_160.JPEG)![n02111277_160](https://github.com/ss9636970/KAZE-perception_learning/blob/main/readme/n02111500_113.jpg)
 
-# 2. test model
-hw1.ipynb 中標題有 test 的部分是對模型用 test 資料己算準確率，底下是畫模型的 accuracy  curve
+
+
+資料可分為:
+
+63325張訓練資料
+
+450張測試資料
+
+450張驗證資料
+
+
+
+# 2. LetNet model
+本篇使用Letnet為訓練模型，實作時以numpy為主要套件。
+
+Letnet模型為多個convolution彼此串聯為特徵提取部分，後街多個全連階層為分類模型。
+
+下突圍letNet結構圖
+
+![LetNet](https://github.com/ss9636970/numpy-LeNet/blob/main/readme/letnet.png)
+
+
+
+# 3. 程式碼說明
+
+LeNet_module.py 為LeNet模型定義程式碼
+
+funcion.py 為程式中運用到的函式。
+
+CNN_encoder.ipynb為訓練特徵提取執行程式
+
+main.ipynb為執行模型訓練程式，當中包括讀取資料及特模型訓練的程式碼
+
+
+
+
+
